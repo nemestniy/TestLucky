@@ -63,9 +63,9 @@ public class PlayerController : MonoBehaviour
                 transform.LookAt(target.position, Vector3.up);
                 gun.Shoot(damage);
             }
-            else
+            else if (target == null)
             {
-                transform.LookAt(transform.forward, Vector3.up);
+                transform.LookAt(transform.position + Vector3.forward, Vector3.up);
             }
         }
     }
